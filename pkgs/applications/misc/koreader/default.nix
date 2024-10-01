@@ -15,15 +15,15 @@ let
 in
 stdenv.mkDerivation rec {
   pname = "koreader";
-  version = "2024.03.1";
+  version = "2024.07";
 
 
   src = if stdenv.isAarch64 then fetchurl {
     url = "https://github.com/koreader/koreader/releases/download/v${version}/koreader-${version}-arm64.deb";
-    hash = "sha256-9Bu+mWfJuPaH5nV71JMrcGipiZWfcf19KfVauCW92+I=";
+    hash = "sha256-KrkY1lTwq8mIomUUCQ9KvfZqinJ74Y86fkPexsFiOPg=";
   } else fetchurl {
     url = "https://github.com/koreader/koreader/releases/download/v${version}/koreader-${version}-amd64.deb";
-    hash = "sha256-EZ3iqp0A2BZwI343nvvp71RGQx6FPesUBy4Lha4Yz4U=";
+    hash = "sha256-Xs9Ci5a3FntRwb6kkn1dCGh62pjj/TF154IG1uiDpRQ=";
   };
 
   src_repo = fetchFromGitHub {
